@@ -1,0 +1,62 @@
+name: Microsoft Access
+description: Microsoft Access is a database management system from Microsoft that combines the relational Microsoft Jet Database Engine with a graphical user interface and software development tools.
+image: https://www.microsoft.com/en-us/microsoft-365/access
+tags:
+- Database
+- Desktop Database
+- Microsoft
+- Access Database
+- Relational Database
+created: '2024'
+modified: '2024'
+url: https://www.microsoft.com/en-us/microsoft-365/access
+specificationVersion: '0.18'
+apis:
+- name: Microsoft Access Database Engine API
+  description: API for programmatic access to Microsoft Access databases through various interfaces including ODBC, OLE DB, and DAO
+  image: https://www.microsoft.com/en-us/microsoft-365/access
+  humanUrl: https://learn.microsoft.com/en-us/office/client-developer/access/access-home
+  baseUrl: https://api.example.com/access
+  tags:
+  - Database
+  - DAO
+  - ODBC
+  - OLE DB
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/
+  - type: OpenAPI
+    url: https://example.com/openapi.json
+  - type: Tutorials
+    url: https://learn.microsoft.com/en-us/office/vba/access/concepts/miscellaneous/concepts-access-vba-reference
+- name: Microsoft Graph API (for Access Online)
+  description: API for accessing Microsoft Access databases stored in SharePoint or OneDrive through Microsoft Graph
+  image: https://learn.microsoft.com/graph/images/microsoft-graph.png
+  humanUrl: https://learn.microsoft.com/en-us/graph/overview
+  baseUrl: https://graph.microsoft.com/v1.0
+  tags:
+  - Microsoft Graph
+  - Cloud Database
+  - SharePoint
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/api/resources/list
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+common:
+- type: Portal
+  url: https://www.microsoft.com/en-us/microsoft-365
+- type: Support
+  url: https://support.microsoft.com/access
+- type: Pricing
+  url: https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing
+- type: Blog
+  url: https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog
+- type: Terms of Service
+  url: https://www.microsoft.com/en-us/servicesagreement
+maintainers:
+- FN: Microsoft Corporation
+  email: support@microsoft.com
+  url: https://www.microsoft.com

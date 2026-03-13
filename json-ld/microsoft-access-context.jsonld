@@ -1,0 +1,382 @@
+{
+  "@context": {
+    "@version": 1.1,
+
+    "access": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+
+    "Database": {
+      "@id": "access:database-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "version": {
+          "@id": "schema:softwareVersion"
+        },
+        "collatingOrder": {
+          "@id": "access:database-collatingorder-property-dao",
+          "@type": "xsd:integer"
+        },
+        "connect": {
+          "@id": "access:database-connect-property-dao"
+        },
+        "queryTimeout": {
+          "@id": "access:database-querytimeout-property-dao",
+          "@type": "xsd:integer"
+        },
+        "recordsAffected": {
+          "@id": "access:database-recordsaffected-property-dao",
+          "@type": "xsd:integer"
+        },
+        "updatable": {
+          "@id": "access:database-updatable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "transactions": {
+          "@id": "access:database-transactions-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "designMasterID": {
+          "@id": "access:database-designmasterid-property-dao"
+        },
+        "replicaID": {
+          "@id": "access:database-replicaid-property-dao"
+        },
+        "tableDefs": {
+          "@id": "access:database-tabledefs-property-dao",
+          "@container": "@set"
+        },
+        "queryDefs": {
+          "@id": "access:database-querydefs-property-dao",
+          "@container": "@set"
+        },
+        "relations": {
+          "@id": "access:database-relations-property-dao",
+          "@container": "@set"
+        },
+        "containers": {
+          "@id": "access:database-containers-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "TableDef": {
+      "@id": "access:tabledef-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "attributes": {
+          "@id": "access:tabledef-attributes-property-dao",
+          "@type": "xsd:integer"
+        },
+        "dateCreated": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "lastUpdated": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        },
+        "connect": {
+          "@id": "access:tabledef-connect-property-dao"
+        },
+        "sourceTableName": {
+          "@id": "access:tabledef-sourcetablename-property-dao"
+        },
+        "recordCount": {
+          "@id": "access:tabledef-recordcount-property-dao",
+          "@type": "xsd:integer"
+        },
+        "updatable": {
+          "@id": "access:tabledef-updatable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "validationRule": {
+          "@id": "access:tabledef-validationrule-property-dao"
+        },
+        "validationText": {
+          "@id": "access:tabledef-validationtext-property-dao"
+        },
+        "conflictTable": {
+          "@id": "access:tabledef-conflicttable-property-dao"
+        },
+        "replicaFilter": {
+          "@id": "access:tabledef-replicafilter-property-dao"
+        },
+        "fields": {
+          "@id": "access:tabledef-fields-property-dao",
+          "@container": "@set"
+        },
+        "indexes": {
+          "@id": "access:tabledef-indexes-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "Field": {
+      "@id": "access:field-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "type": {
+          "@id": "access:field-type-property-dao",
+          "@type": "xsd:integer"
+        },
+        "size": {
+          "@id": "access:field-size-property-dao",
+          "@type": "xsd:integer"
+        },
+        "attributes": {
+          "@id": "access:field-attributes-property-dao",
+          "@type": "xsd:integer"
+        },
+        "ordinalPosition": {
+          "@id": "access:field-ordinalposition-property-dao",
+          "@type": "xsd:integer"
+        },
+        "required": {
+          "@id": "access:field-required-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "allowZeroLength": {
+          "@id": "access:field-allowzerolength-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "defaultValue": {
+          "@id": "access:field-defaultvalue-property-dao"
+        },
+        "validationRule": {
+          "@id": "access:field-validationrule-property-dao"
+        },
+        "validationText": {
+          "@id": "access:field-validationtext-property-dao"
+        },
+        "validateOnSet": {
+          "@id": "access:field-validateonset-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "collatingOrder": {
+          "@id": "access:field-collatingorder-property-dao",
+          "@type": "xsd:integer"
+        },
+        "foreignName": {
+          "@id": "access:field-foreignname-property-dao"
+        },
+        "sourceField": {
+          "@id": "access:field-sourcefield-property-dao"
+        },
+        "sourceTable": {
+          "@id": "access:field-sourcetable-property-dao"
+        },
+        "dataUpdatable": {
+          "@id": "access:field-dataupdatable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "expression": {
+          "@id": "schema:mathExpression"
+        }
+      }
+    },
+
+    "Index": {
+      "@id": "access:index-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "primary": {
+          "@id": "access:index-primary-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "unique": {
+          "@id": "access:index-unique-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "required": {
+          "@id": "access:index-required-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "ignoreNulls": {
+          "@id": "access:index-ignorenulls-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "foreign": {
+          "@id": "access:index-foreign-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "clustered": {
+          "@id": "access:index-clustered-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "distinctCount": {
+          "@id": "access:index-distinctcount-property-dao",
+          "@type": "xsd:integer"
+        },
+        "fields": {
+          "@id": "access:index-fields-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "QueryDef": {
+      "@id": "access:querydef-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "type": {
+          "@id": "schema:additionalType",
+          "@type": "xsd:integer"
+        },
+        "sql": {
+          "@id": "access:querydef-sql-property-dao"
+        },
+        "dateCreated": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "lastUpdated": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        },
+        "updatable": {
+          "@id": "access:querydef-updatable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "connect": {
+          "@id": "access:querydef-connect-property-dao"
+        },
+        "returnsRecords": {
+          "@id": "access:querydef-returnsrecords-property-dao",
+          "@type": "xsd:boolean"
+        }
+      }
+    },
+
+    "Relation": {
+      "@id": "access:relation-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "table": {
+          "@id": "access:relation-table-property-dao"
+        },
+        "foreignTable": {
+          "@id": "access:relation-foreigntable-property-dao"
+        },
+        "attributes": {
+          "@id": "access:relation-attributes-property-dao",
+          "@type": "xsd:integer"
+        },
+        "fields": {
+          "@id": "access:relation-fields-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "Recordset": {
+      "@id": "access:recordset-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "type": {
+          "@id": "schema:additionalType",
+          "@type": "xsd:integer"
+        },
+        "recordCount": {
+          "@id": "access:recordset-recordcount-property-dao",
+          "@type": "xsd:integer"
+        },
+        "bof": {
+          "@id": "access:recordset-bof-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "eof": {
+          "@id": "access:recordset-eof-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "updatable": {
+          "@id": "access:recordset-updatable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "bookmarkable": {
+          "@id": "access:recordset-bookmarkable-property-dao",
+          "@type": "xsd:boolean"
+        },
+        "dateCreated": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "lastUpdated": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        },
+        "fields": {
+          "@id": "access:recordset-fields-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "Container": {
+      "@id": "access:container-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "owner": {
+          "@id": "schema:creator"
+        },
+        "permissions": {
+          "@id": "access:container-permissions-property-dao",
+          "@type": "xsd:integer"
+        },
+        "documents": {
+          "@id": "access:container-documents-property-dao",
+          "@container": "@set"
+        }
+      }
+    },
+
+    "Document": {
+      "@id": "access:document-object-dao",
+      "@type": "@id",
+      "@context": {
+        "name": {
+          "@id": "schema:name"
+        },
+        "owner": {
+          "@id": "schema:creator"
+        },
+        "dateCreated": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "lastUpdated": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}

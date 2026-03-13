@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/tabledef-object-dao",
+  "title": "Microsoft Access TableDef",
+  "description": "Schema for a Microsoft Access TableDef object as defined in the DAO (Data Access Objects) reference. A TableDef object represents the stored definition of a base table or a linked table, including its fields, indexes, validation rules, and connection properties.",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the table in the database.",
+      "minLength": 1,
+      "maxLength": 64,
+      "examples": ["Customers", "Orders", "Products", "Employees"]
+    },
+    "attributes": {
+      "type": ["integer", "null"],
+      "description": "A value that indicates one or more characteristics of the TableDef object. Combines constants: dbAttachExclusive (65536), dbAttachSavePWD (131072), dbSystemObject (2), dbHiddenObject (1), dbAttachedTable (1073741824), dbAttachedODBC (536870912).",
+      "examples": [0, 1073741824, 536870912]
+    },
+    "dateCreated": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The date and time the table was created. Read-only.",
+      "examples": ["2024-01-15T09:00:00Z"]
+    },
+    "lastUpdated": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "The date and time of the most recent change made to the table definition or its data. Read-only.",
+      "examples": ["2024-06-20T14:30:00Z"]
+    },
+    "connect": {
+      "type": ["string", "null"],
+      "description": "For linked tables, a value that provides information about the source of the linked table, including the database type and path. Empty string for base tables.",
+      "examples": [
+        "",
+        ";DATABASE=C:\\Data\\External.accdb",
+        "ODBC;DSN=MyServer;DATABASE=pubs;"
+      ]
+    },
+    "sourceTableName": {
+      "type": ["string", "null"],
+      "description": "For linked tables, the name of the table in the external data source. Empty for base tables.",
+      "examples": ["", "dbo.Customers"]
+    },
+    "recordCount": {
+      "type": ["integer", "null"],
+      "description": "The number of records in the TableDef object. For base tables, this reflects the actual count. For linked tables, this is always -1.",
+      "minimum": -1,
+      "examples": [0, 100, 5000, -1]
+    },
+    "updatable": {
+      "type": ["boolean", "null"],
+      "description": "A value that indicates whether the table definition can be changed. True if the table structure can be modified. Read-only."
+    },
+    "validationRule": {
+      "type": ["string", "null"],
+      "description": "A value that validates the data in a field as it is changed or added to a table. Uses Access SQL expression syntax. Applied at the table level to validate records.",
+      "examples": [
+        "[EndDate] >= [StartDate]",
+        "[Quantity] > 0",
+        "[Price] >= 0 AND [Price] <= 10000"
+      ]
+    },
+    "validationText": {
+      "type": ["string", "null"],
+      "description": "A value that specifies the text of the message that the application displays if the value of a field does not satisfy the validation rule.",
+      "examples": [
+        "End date must be on or after the start date.",
+        "Quantity must be greater than zero."
+      ]
+    },
+    "conflictTable": {
+      "type": ["string", "null"],
+      "description": "The name of a conflict table containing database records that conflicted during replica synchronization. Read-only. Empty string if no conflicts exist."
+    },
+    "replicaFilter": {
+      "type": ["string", "boolean", "null"],
+      "description": "A value that indicates which subset of records is replicated to that table from a full replica. Can be a Boolean (True for all records) or a filter expression string."
+    },
+    "fields": {
+      "type": ["array", "null"],
+      "description": "A collection of all Field objects in the TableDef. Each Field represents a column of data with a common data type and common set of properties.",
+      "items": {
+        "$ref": "#/$defs/Field"
+      }
+    },
+    "indexes": {
+      "type": ["array", "null"],
+      "description": "A collection of all Index objects defined for the table. Indexes specify the order of records and whether duplicate records are accepted.",
+      "items": {
+        "$ref": "#/$defs/Index"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "Field": {
+      "type": "object",
+      "description": "A Field object represents a column of data with a common data type and a common set of properties. Corresponds to the DAO Field object within a TableDef's Fields collection.",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the field. Must be unique within the Fields collection.",
+          "minLength": 1,
+          "maxLength": 64,
+          "examples": ["CustomerID", "FirstName", "OrderDate", "UnitPrice"]
+        },
+        "type": {
+          "type": "integer",
+          "description": "A value that indicates the data type of the field. DAO type constants: dbBoolean (1), dbByte (2), dbInteger (3), dbLong (4), dbCurrency (5), dbSingle (6), dbDouble (7), dbDate (8), dbBinary (9), dbText (10), dbLongBinary (11 - OLE Object), dbMemo (12), dbGUID (15), dbBigInt (16), dbVarBinary (17), dbChar (18), dbNumeric (19), dbFloat (21), dbTime (22), dbTimeStamp (23), dbAttachment (101), dbComplexByte (102), dbComplexInteger (103), dbComplexLong (104), dbComplexSingle (105), dbComplexDouble (106), dbComplexGUID (107), dbComplexDecimal (108), dbComplexText (109).",
+          "examples": [1, 3, 4, 7, 8, 10, 12]
+        },
+        "size": {
+          "type": ["integer", "null"],
+          "description": "A value that indicates the maximum size, in bytes, of a Field object. For Text fields, this is the maximum number of characters (up to 255). For numeric and fixed-width fields, the size is determined by the type.",
+          "minimum": 0,
+          "maximum": 255,
+          "examples": [50, 100, 255]
+        },
+        "attributes": {
+          "type": ["integer", "null"],
+          "description": "A value that indicates characteristics of the field. Combines constants: dbAutoIncrField (16 - AutoNumber), dbDescending (1 - descending sort in index), dbFixedField (1 - fixed size), dbHyperlinkField (32768 - hyperlink), dbSystemField (8192 - system field), dbUpdatableField (32 - updatable), dbVariableField (2 - variable size).",
+          "examples": [0, 16, 32768]
+        },
+        "ordinalPosition": {
+          "type": ["integer", "null"],
+          "description": "The relative position of the field within the Fields collection. Determines the default column order.",
+          "minimum": 0,
+          "examples": [0, 1, 2, 3]
+        },
+        "required": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the field requires a non-Null value. If True, no Null values are allowed."
+        },
+        "allowZeroLength": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether a zero-length string is a valid setting for the Value property of a Text or Memo field."
+        },
+        "defaultValue": {
+          "type": ["string", "null"],
+          "description": "The default value of the field. Automatically assigned to new records if no value is specified.",
+          "examples": ["0", "Date()", "\"Unknown\"", "True"]
+        },
+        "validationRule": {
+          "type": ["string", "null"],
+          "description": "An expression that validates the data entered in the field. Uses Access SQL expression syntax.",
+          "examples": [
+            ">0",
+            "Like \"[A-Z]*\"",
+            "Between 1 And 100",
+            "Is Not Null"
+          ]
+        },
+        "validationText": {
+          "type": ["string", "null"],
+          "description": "The text of the error message displayed when the value entered does not satisfy the validation rule.",
+          "examples": ["Value must be greater than zero.", "Please enter a valid entry."]
+        },
+        "validateOnSet": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the value of the field is immediately validated when set. Primarily used for Memo and Long Binary fields."
+        },
+        "collatingOrder": {
+          "type": ["integer", "null"],
+          "description": "A value that specifies the sequence of the sort order in text for string comparison or sorting."
+        },
+        "foreignName": {
+          "type": ["string", "null"],
+          "description": "A value that specifies the name of the Field object in a foreign table that corresponds to a field in a primary table. Used in Relation objects."
+        },
+        "sourceField": {
+          "type": ["string", "null"],
+          "description": "The name of the field in the original source of data. Read-only."
+        },
+        "sourceTable": {
+          "type": ["string", "null"],
+          "description": "The name of the table that is the original source of data. Read-only."
+        },
+        "dataUpdatable": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the data in the field can be updated. Read-only."
+        },
+        "fieldSize": {
+          "type": ["integer", "null"],
+          "description": "The number of bytes used in the database for a Memo or Long Binary (OLE Object) field. Read-only.",
+          "minimum": 0
+        },
+        "expression": {
+          "type": ["string", "null"],
+          "description": "For calculated fields (Access 2010+), the expression that defines the calculated value.",
+          "examples": ["[FirstName] & \" \" & [LastName]", "[Quantity] * [UnitPrice]"]
+        }
+      }
+    },
+    "Index": {
+      "type": "object",
+      "description": "An Index object specifies the order of records accessed from database tables and whether duplicate records are accepted. Corresponds to the DAO Index object within a TableDef's Indexes collection.",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the index.",
+          "examples": ["PrimaryKey", "CustomerNameIndex", "OrderDateIndex"]
+        },
+        "primary": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the index represents the primary key for the table. Only one index per table can be the primary key."
+        },
+        "unique": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the index requires unique values. If True, no duplicate values are allowed in the indexed fields."
+        },
+        "required": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether all fields in the index require non-Null values."
+        },
+        "ignoreNulls": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether records with Null values in their index fields have index entries. If True, records with Null index values are excluded from the index."
+        },
+        "foreign": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the index is a foreign key index, automatically created by the database engine when a relationship is established. Read-only."
+        },
+        "clustered": {
+          "type": ["boolean", "null"],
+          "description": "A value that indicates whether the index is a clustered index. Not supported by the Microsoft Access database engine; ignored for Access databases."
+        },
+        "distinctCount": {
+          "type": ["integer", "null"],
+          "description": "The number of unique values for the index that are included in the associated table. Read-only.",
+          "minimum": 0
+        },
+        "fields": {
+          "type": ["array", "null"],
+          "description": "A collection of Field objects that make up the index. The order of fields determines the sort hierarchy.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the field included in the index."
+              },
+              "attributes": {
+                "type": ["integer", "null"],
+                "description": "Attributes of the field within the index. Use dbDescending (1) for descending sort order."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

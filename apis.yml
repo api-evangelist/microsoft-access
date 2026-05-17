@@ -145,7 +145,7 @@ common:
     url: https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing
   - type: Blog
     url: https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.microsoft.com/en-us/servicesagreement
   - type: Developer Documentation
     url: https://learn.microsoft.com/en-us/office/client-developer/access/access-home
@@ -153,9 +153,9 @@ common:
     url: https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/
   - type: Access Database Engine Download
     url: https://www.microsoft.com/en-us/download/details.aspx?id=54920
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/en-us/privacystatement
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/microsoft-access-context.jsonld
   - type: JSONSchema
     url: json-schema/microsoft-access-database-schema.json

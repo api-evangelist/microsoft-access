@@ -137,6 +137,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/access
 common:
+  - type: GitHubOrganization
+    url: https://github.com/microsoft
   - type: Portal
     url: https://www.microsoft.com/en-us/microsoft-365
   - type: Support

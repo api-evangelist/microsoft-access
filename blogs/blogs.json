@@ -2,13 +2,13 @@
   "repo": "microsoft-access",
   "feeds": [
     {
-      "source": "https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog",
-      "feed_url": "",
+      "source": "https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing",
+      "feed_url": "https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing",
       "title": "",
       "saved": 0,
-      "error": "no_feed"
+      "method": "none"
     }
   ],
-  "fetched": "2026-05-17T20:48:52Z",
+  "fetched": "2026-06-01T23:35:02Z",
   "post_count": 0
 }

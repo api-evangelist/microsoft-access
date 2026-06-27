@@ -2,20 +2,13 @@
   "repo": "microsoft-access",
   "feeds": [
     {
-      "source": "https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog/rss",
-      "feed_url": "https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog/rss",
-      "title": "",
+      "source": "https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing",
-      "feed_url": "https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 3,
+  "fetched": "2026-06-27T12:54:04Z",
+  "agent_pulled": "2026-06-27"
 }

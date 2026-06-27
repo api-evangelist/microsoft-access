@@ -149,7 +149,7 @@ common:
     url: https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog
   - type: TermsOfService
     url: https://www.microsoft.com/en-us/servicesagreement
-  - type: Developer Documentation
+  - type: Documentation
     url: https://learn.microsoft.com/en-us/office/client-developer/access/access-home
   - type: Desktop Database Reference
     url: https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/

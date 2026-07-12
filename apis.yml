@@ -137,6 +137,12 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/access
 common:
+  - type: TrustCenter
+    url: security/microsoft-access-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/microsoft-access-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/microsoft-access-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/microsoft
   - type: Portal

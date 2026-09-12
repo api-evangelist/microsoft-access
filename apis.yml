@@ -160,6 +160,8 @@ apis:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/access
 common:
+  - type: Website
+    url: https://www.microsoft.com/
   - type: TrustCenter
     url: security/microsoft-access-trust-center.yml
   - type: VulnerabilityDisclosure
@@ -208,3 +210,5 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
     url: https://apievangelist.com
+x-parent: microsoft
+x-relationship: product

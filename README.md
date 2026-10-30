@@ -1,4 +1,4 @@
-# Microsoft Access (microsoft-access)
+# Microsoft Access
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,61 +66,134 @@
 
 Microsoft Access is a database management system from Microsoft that combines the relational Microsoft Jet Database Engine with a graphical user interface and software development tools.
 
-**URL:** [Visit APIs.json URL](https://www.microsoft.com/en-us/microsoft-365/access)
+**Areas:** Access Database · Database · Desktop Database · Microsoft · Relational Database
 
-## Tags:
+## Microsoft Access on APIs.io
 
- - Database, Desktop Database, Microsoft, Access Database, Relational Database
+Everything profiled for Microsoft Access is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/microsoft-access/](https://apis.io/providers/microsoft-access/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (8)
 
-- **Created:** 2024 
-- **Modified:** 2026-04-28 
+- [Microsoft Access Database Engine API](https://apis.io/apis/microsoft-access/microsoft-access-database-engine-api/) — API for programmatic access to Microsoft Access databases through various interfaces including ODBC, OLE DB, and DAO.
+- [Microsoft Graph API (for Access Online)](https://apis.io/apis/microsoft-access/microsoft-graph-api-for-access-online/) — API for accessing Microsoft Access databases stored in SharePoint or OneDrive through Microsoft Graph.
+- [Microsoft Access VBA API](https://apis.io/apis/microsoft-access/microsoft-access-vba-api/) — The Access Visual Basic for Applications (VBA) object model provides programmatic access to all Access objects, properties, methods, and events for…
+- [Microsoft Data Access Objects (DAO) API](https://apis.io/apis/microsoft-access/microsoft-data-access-objects-dao-api/) — Data Access Objects (DAO) provide a programmatic interface to create, query, and modify the structure and data of Access databases, with objects like…
+- [Microsoft ActiveX Data Objects (ADO) API](https://apis.io/apis/microsoft-access/microsoft-activex-data-objects-ado-api/) — ActiveX Data Objects (ADO) enable client applications to access and manipulate data from Access databases through OLE DB providers, supporting features for…
+- [Microsoft Access SQL API](https://apis.io/apis/microsoft-access/microsoft-access-sql-api/) — The Microsoft Access SQL reference provides documentation for the Access SQL dialect, including data definition language (DDL) for creating and modifying…
+- [Microsoft Access Macro Actions API](https://apis.io/apis/microsoft-access/microsoft-access-macro-actions-api/) — The Access macro actions interface provides a set of programmable actions for automating database tasks including data operations, form management,…
+- [Power Automate Access Actions API](https://apis.io/apis/microsoft-access/power-automate-access-actions-api/) — Power Automate for desktop provides built-in actions for automating Microsoft Access databases, including launching Access instances, reading tables,…
 
-## APIs
+### Published properties
 
-### Microsoft Access Database Engine API
-API for programmatic access to Microsoft Access databases through various interfaces including ODBC, OLE DB, and DAO
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**Human URL:** [https://learn.microsoft.com/en-us/office/client-developer/access/access-home](https://learn.microsoft.com/en-us/office/client-developer/access/access-home)
+#### JSON Schema (2)
 
+The data models the API reads and writes.
 
-#### Tags:
+- [Microsoft Access Database](https://apis.io/schemas/microsoft-access/microsoft-access-database/)
+- [Microsoft Access TableDef](https://apis.io/schemas/microsoft-access/microsoft-access-table/)
 
- - Database, DAO, ODBC, OLE DB
+#### JSON-LD (1)
 
-#### Properties
+Linked-data contexts for the provider's vocabulary.
 
-- [Documentation](https://learn.microsoft.com/en-us/office/client-developer/access/desktop-database-reference/)
-- [OpenAPI](https://example.com/openapi.json)
-- [Tutorials](https://learn.microsoft.com/en-us/office/vba/access/concepts/miscellaneous/concepts-access-vba-reference)
+- [Microsoft Access Context](https://apis.io/jsonld/microsoft-access/microsoft-access-context/)
 
-### Microsoft Graph API (for Access Online)
-API for accessing Microsoft Access databases stored in SharePoint or OneDrive through Microsoft Graph
+#### Governance rules (1)
 
-**Human URL:** [https://learn.microsoft.com/en-us/graph/overview](https://learn.microsoft.com/en-us/graph/overview)
+Spectral rulesets for the provider's contracts.
 
+- [Microsoft Access — jsonschema rules](https://apis.io/rules/microsoft-access/microsoft-access-jsonschema-spectral-rules/)
 
-#### Tags:
+#### Security (3)
 
- - Microsoft Graph, Cloud Database, SharePoint
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Microsoft Access Domain Security](https://apis.io/security/microsoft-access/microsoft-access-domain-security/)
+- [Microsoft Access Trust Center](https://apis.io/security/microsoft-access/microsoft-access-trust-center/)
+- [Microsoft Access Vulnerability Disclosure](https://apis.io/security/microsoft-access/microsoft-access-vulnerability-disclosure/)
 
-- [Documentation](https://learn.microsoft.com/en-us/graph/api/resources/list)
-- [Authentication](https://learn.microsoft.com/en-us/graph/auth/)
-- [SDKs](https://learn.microsoft.com/en-us/graph/sdks/sdks-overview)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
 
-- [Portal](https://www.microsoft.com/en-us/microsoft-365)
-- [Support](https://support.microsoft.com/access)
+- [Microsoft Access Plans Pricing](https://apis.io/plans/microsoft-access/microsoft-access-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Microsoft Access Rate Limits](https://apis.io/rate-limits/microsoft-access/microsoft-access-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Microsoft Access Finops](https://apis.io/finops/microsoft-access/microsoft-access-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.microsoft.com/)
+- [Documentation](https://learn.microsoft.com/en-us/office/client-developer/access/access-home)
 - [Pricing](https://www.microsoft.com/en-us/microsoft-365/access/compare-microsoft-access-plans-and-pricing)
+- [Support](https://support.microsoft.com/access)
 - [Blog](https://techcommunity.microsoft.com/t5/access-blog/bg-p/AccessBlog)
-- [Terms of Service](https://www.microsoft.com/en-us/servicesagreement)
+- [Terms of service](https://www.microsoft.com/en-us/servicesagreement)
+- [Privacy policy](https://privacy.microsoft.com/en-us/privacystatement)
+- [GitHub](https://github.com/microsoft)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Microsoft Corporation
+**Kin Score 35.9** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** support@microsoft.com
+| Facet | Score |
+|---|---|
+| Discoverability | 51.8 |
+| Contract quality | 30.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 42.1 |
+
+**Agent readiness 16.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/microsoft-access/](https://apis.io/providers/microsoft-access/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Microsoft Access: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/microsoft-access/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
